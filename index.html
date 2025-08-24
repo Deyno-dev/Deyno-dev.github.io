@@ -1,47 +1,787 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Deyno - Github.io</title>
-  <meta name="color-scheme" content="dark">
-  <link rel="stylesheet" href="./assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortfolio | Complete GitHub Pages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6c63ff;
+            --secondary: #4a40e5;
+            --accent: #ff6584;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--secondary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.2);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(135deg, #f5f7ff 0%, #e6e9ff 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--gray);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-img {
+            height: 200px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 3rem;
+        }
+
+        .portfolio-content {
+            padding: 20px;
+        }
+
+        .portfolio-content h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: var(--light);
+        }
+
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .project-filter-btn {
+            padding: 8px 20px;
+            margin: 5px;
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .project-filter-btn.active, .project-filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-img {
+            height: 200px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            padding: 5px 12px;
+            background: var(--light-gray);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* Design Section */
+        .design-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .design-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .design-img {
+            height: 250px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 3rem;
+        }
+
+        .design-content {
+            padding: 20px;
+        }
+
+        /* Funding Section */
+        .funding {
+            background: linear-gradient(135deg, #6c63ff 0%, #4a40e5 100%);
+            color: white;
+        }
+
+        .funding .section-title:after {
+            background: white;
+        }
+
+        .funding-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .funding-option {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .funding-option i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .funding-option h3 {
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: white;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-grid, .portfolio-grid, .design-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <div class="nav">
-      <div class="nav-left">
-        <a class="logo" href="./"><img src="./assets/logo.png" width="200" height="200" alt="Logo"/></a>
-      </div>
-      <div class="nav-right">
-        <a class="nav-link" href="./">Home</a>
-        <a class="nav-link" href="./portfolio.html">Portfolio</a>
-        <a class="nav-link" href="./design.html">Design</a>
-        <a class="nav-link" href="./projects.html">Projects</a>
-        <a class="nav-link" href="./funding.html">Funding</a>
-        <button id="openSidebar" class="btn">Menu</button>
-      </div>
-    </div>
-  </header>
-  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
-  <aside id="sidebar" class="sidebar">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <strong>Links</strong>
-      <button id="closeSidebar" class="btn">Close</button>
-    </div>
-    <div class="hr"></div>
-    <nav>
-      <a class="nav-link" href="./info.html">Info</a><br/>
-      <a class="nav-link" href="https://github.com/Deyno-dev" target="_blank">GitHub</a>
-    </nav>
-  </aside>
-  <main>
-    <section id="home">
-      <h1>Welcome to Deyno</h1>
-      <p>Modern minimalistic design showcase.</p>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">DevPortfolio</a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#funding">Funding</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Transform Ideas Into Digital Reality</h1>
+            <p>I'm a passionate developer and designer creating beautiful, functional websites and applications that deliver exceptional user experiences.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer class="footer">© <span id="y"></span> Deyno</footer>
-  <script src="./assets/app.js"></script>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>E-Commerce Website</h3>
+                        <p>A fully responsive e-commerce platform with payment integration and admin dashboard.</p>
+                        <a href="#">View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Fitness App</h3>
+                        <p>Mobile application for tracking workouts and nutrition with personalized recommendations.</p>
+                        <a href="#">View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real-time data visualization dashboard for business metrics and performance tracking.</p>
+                        <a href="#">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-filters">
+                <button class="project-filter-btn active">All</button>
+                <button class="project-filter-btn">Web Dev</button>
+                <button class="project-filter-btn">Mobile</button>
+                <button class="project-filter-btn">UI/UX</button>
+                <button class="project-filter-btn">Open Source</button>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Complete online shopping solution with product management, cart, and checkout functionality.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Booking System</h3>
+                        <p>Reservation and appointment booking system for service-based businesses.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Vue.js</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Stripe</span>
+                        </div>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Learning Management System</h3>
+                        <p>Platform for creating and delivering online courses with progress tracking.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Angular</span>
+                            <span class="project-tag">Express</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Section -->
+    <section id="design" class="section">
+        <div class="container">
+            <h2 class="section-title">Design Showcase</h2>
+            <div class="design-showcase">
+                <div class="design-item">
+                    <div class="design-img">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="design-content">
+                        <h3>UI/UX Design</h3>
+                        <p>Collection of user interface designs and experiences focused on usability and aesthetics.</p>
+                        <a href="#">View Designs &rarr;</a>
+                    </div>
+                </div>
+                <div class="design-item">
+                    <div class="design-img">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="design-content">
+                        <h3>Brand Identity</h3>
+                        <p>Logo design, color schemes, and branding guidelines for various businesses.</p>
+                        <a href="#">View Projects &rarr;</a>
+                    </div>
+                </div>
+                <div class="design-item">
+                    <div class="design-img">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="design-content">
+                        <h3>Web Design</h3>
+                        <p>Responsive website designs with modern layouts and interactive elements.</p>
+                        <a href="#">View Projects &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Section -->
+    <section id="funding" class="section funding">
+        <div class="container">
+            <h2 class="section-title">Project Funding</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">I'm working on several exciting projects. Your support can help bring these ideas to life. Choose a project to support or contribute to my overall development efforts.</p>
+            
+            <div class="funding-options">
+                <div class="funding-option">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Assistant Tool</h3>
+                    <p>An intelligent assistant for developers that helps with code completion and debugging.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                    <p>65% funded | $6,500 of $10,000</p>
+                    <a href="#" class="btn">Support This Project</a>
+                </div>
+                <div class="funding-option">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Educational Game Platform</h3>
+                    <p>Interactive games that make learning programming concepts fun and engaging.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%;"></div>
+                    </div>
+                    <p>40% funded | $4,000 of $10,000</p>
+                    <a href="#" class="btn">Support This Project</a>
+                </div>
+                <div class="funding-option">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Health & Wellness App</h3>
+                    <p>Comprehensive health tracking application with personalized recommendations.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%;"></div>
+                    </div>
+                    <p>25% funded | $5,000 of $20,000</p>
+                    <a href="#" class="btn">Support This Project</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <h3>General Support</h3>
+                <p>You can also support my overall development efforts with a one-time or recurring contribution.</p>
+                <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+                    <a href="#" class="btn">One-Time Donation</a>
+                    <a href="#" class="btn btn-outline">Monthly Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DevPortfolio</h3>
+                    <p>Creating beautiful, functional digital experiences that make a difference.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#design">Design</a></li>
+                        <li><a href="#funding">Funding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> hello@devportfolio.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to my newsletter for updates on new projects and features.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" style="width: 100%; padding: 12px; margin: 10px 0; border: none; border-radius: 5px;">
+                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 DevPortfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for navigation and filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const filterButtons = document.querySelectorAll('.project-filter-btn');
+            
+            // Navigation active state
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Project filtering
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    // Actual filtering would be implemented here
+                });
+            });
+            
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            });
+        });
+    </script>
 </body>
 </html>
