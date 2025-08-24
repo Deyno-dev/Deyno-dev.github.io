@@ -1,48 +1,40 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Funding - Deyno</title>
-  <meta name="color-scheme" content="dark">
-  <link rel="stylesheet" href="./assets/styles.css">
-</head>
-<body>
-  <header class="header">
-    <div class="nav">
-      <div class="nav-left">
-        <a class="logo" href="./"><img src="./assets/logo.png" width="200" height="200" alt="Logo"/></a>
-      </div>
-      <div class="nav-right">
-        <a class="nav-link" href="./">Home</a>
-        <a class="nav-link" href="./portfolio.html">Portfolio</a>
-        <a class="nav-link" href="./design.html">Design</a>
-        <a class="nav-link" href="./projects.html">Projects</a>
-        <a class="nav-link" href="./funding.html">Funding</a>
-        <button id="openSidebar" class="btn">Menu</button>
-      </div>
-    </div>
-  </header>
-  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
-  <aside id="sidebar" class="sidebar">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <strong>Links</strong>
-      <button id="closeSidebar" class="btn">Close</button>
-    </div>
-    <div class="hr"></div>
-    <nav>
-      <a class="nav-link" href="./info.html">Info</a><br/>
-      <a class="nav-link" href="https://github.com/Deyno-dev" target="_blank">GitHub</a>
+<head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Deyno — Funding</title>
+<meta name="description" content="Deyno — Funding"/>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="css/site.css"/>
+<script defer src="js/site.js"></script>
+<meta property="og:title" content="Deyno — Funding"/>
+<meta property="og:description" content="Deyno — Funding"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/></head>
+<body><div class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Deyno"/></a>
+    <nav class="topnav" aria-label="Top navigation">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="funding.html">Funding</a>
+      <a href="docs/index.html">Docs</a>
     </nav>
-  </aside>
-  <main>
-    <section id="funding">
-      <h2>Funding</h2>
-      <p>Funding opportunities and status.</p>
-      <p>Seeking investments for upcoming projects.</p>
-    </section>
-  </main>
-  <footer class="footer">© <span id="y"></span> Deyno</footer>
-  <script src="./assets/app.js"></script>
-</body>
-</html>
+  </div>
+</div><main class="section"><div class="container grid cols-2">
+<div>
+  <h1 class="section-title">Funding</h1>
+  <p class="lead">Simple and transparent support options.</p>
+  <div class="card"><div class="title">GitHub Sponsors</div><p class="muted">Monthly recurring support.</p><a class="btn primary" href="https://github.com/sponsors/Deyno-dev" target="_blank" rel="noopener">Open Sponsors</a></div>
+  <div class="card"><div class="title">One-time</div><p class="muted">PayPal, Revolut, Stripe.</p><div style="display:flex; gap:8px;"><a class="btn" href="#" target="_blank">PayPal</a><a class="btn" href="#" target="_blank">Revolut</a></div></div>
+</div>
+<div class="card"><div class="title">Contact</div><p class="muted">Need consulting or a feature?</p><form><div><input class="btn" style="width:100%; background:#0e151f; border-color:#23324a;" placeholder="Name"></div><div style="margin-top:8px;"><input class="btn" style="width:100%; background:#0e151f; border-color:#23324a;" placeholder="Email"></div><div style="margin-top:8px;"><textarea class="btn" rows="4" style="width:100%; background:#0e151f; border-color:#23324a;" placeholder="Message"></textarea></div><div style="margin-top:8px;"><button type="button" class="btn primary">Send (static)</button></div></form></div>
+</div></main><footer class="footer">
+  <div class="container inner">
+    <span>© 2025 Deyno</span>
+    <span><a class="btn" href="https://github.com/Deyno-dev" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer></body></html>
