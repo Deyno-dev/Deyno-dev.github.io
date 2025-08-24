@@ -1,0 +1,59 @@
+[
+  {
+    "title": "MediaX \u2014 Gallery Viewer",
+    "summary": "Local-first, high-performance media viewer with tagging, search, and non-destructive edits.",
+    "tags": [
+      "Rust",
+      "ONNX",
+      "Local-first"
+    ],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/Deyno-dev"
+      },
+      {
+        "label": "Docs",
+        "href": "docs/index.html"
+      }
+    ]
+  },
+  {
+    "title": "MediaX \u2014 Dedup Engine",
+    "summary": "Content-aware deduplication: cryptographic + perceptual hashing, batch triage, quarantine.",
+    "tags": [
+      "Rust",
+      "SIMD",
+      "CLI"
+    ],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/Deyno-dev"
+      },
+      {
+        "label": "Demo",
+        "href": "#"
+      }
+    ]
+  },
+  {
+    "title": "OCR Powerhouse",
+    "summary": "PaddleOCR + ONNX + TensorRT stack with gRPC/REST bindings, Dockerized for GPUs.",
+    "tags": [
+      "Python",
+      "CUDA",
+      "gRPC"
+    ],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/Deyno-dev"
+      },
+      {
+        "label": "Docs",
+        "href": "#"
+      }
+    ]
+  }
+]
