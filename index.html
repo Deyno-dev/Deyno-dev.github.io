@@ -1,321 +1,59 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Deyno — Developer · Designer · Systems</title>
-  <meta name="description" content="Deyno (Fredrik Nilsen) — forward‑thinking developer & designer building AI‑powered media systems (MediaX), high‑performance Rust pipelines, and glowing cosmic UIs." />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#0b0d12" />
-  <meta property="og:title" content="Deyno — Portfolio" />
-  <meta property="og:description" content="Developer & designer. MediaX core, Gallery, AI pipelines, cosmic UI." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://deyno-dev.github.io/" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Deyno — Portfolio Hub</title>
   <style>
-    /* --- Base (dark-first) ------------------------------------------------ */
-    :root {
-      --bg: #0b0d12;
-      --bg-elev: #111422;
-      --text: #e8eaf6;
-      --muted: #a6accd;
-      --edge: #22263a;
-      --brand-1: #9d4cff; /* violet */
-      --brand-2: #00e6ff; /* cyan */
-      --brand-3: #ff2fb9; /* magenta */
-      --ring: 0 0 0 2px rgba(0, 230, 255, .35);
-      --shadow: 0 20px 40px rgba(0,0,0,.45);
-      --radius: 18px;
-      --grid: clamp(16px, 2.2vw, 28px);
-    }
-    @media (prefers-color-scheme: light) {
-      :root { --text:#0b0d12; --bg:#f7f8ff; --bg-elev:#ffffff; --edge:#e6e9f5; --muted:#4a5078 }
-    }
-    * { box-sizing: border-box }
-    html, body { height:100%; }
     body {
-      margin:0; font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text); background: radial-gradient(1200px 600px at 10% -10%, rgba(157,76,255,.20), transparent 60%),
-                           radial-gradient(1000px 600px at 90% 10%, rgba(0,230,255,.18), transparent 60%),
-                           radial-gradient(800px 600px at 50% 120%, rgba(255,47,185,.12), transparent 60%), var(--bg);
-      line-height:1.6;
+      margin:0; padding:0; height:100vh;
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      background:#000; color:#fff; font-family:Inter, sans-serif;
     }
-    a { color: var(--brand-2); text-decoration: none; }
-    a:hover { text-decoration: underline }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: calc(var(--grid)*2) var(--grid); }
-    .row { display:grid; gap: var(--grid); }
-    .hero { display:grid; grid-template-columns: 1.2fr .8fr; align-items:center; gap: var(--grid); }
-    @media (max-width: 900px){ .hero{ grid-template-columns: 1fr } }/* --- Cards & chrome --------------------------------------------------- */
-.card { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-        border: 1px solid var(--edge); border-radius: var(--radius); padding: calc(var(--grid)*1.2);
-        box-shadow: var(--shadow); position: relative; }
-.card::after { content: ""; position:absolute; inset:-1px; border-radius: inherit; pointer-events:none;
-               background: radial-gradient(800px 300px at 20% -20%, rgba(157,76,255,.18), transparent 60%),
-                           radial-gradient(800px 300px at 80% 0%, rgba(0,230,255,.18), transparent 60%);
-               mix-blend-mode: screen; opacity:.5 }
-.tag { display:inline-flex; align-items:center; gap:.5ch; padding:.35rem .65rem; border-radius:999px;
-       border:1px solid var(--edge); background:rgba(255,255,255,.02); font-size:.85rem; color:var(--muted) }
-
-/* --- Header ----------------------------------------------------------- */
-header { position: sticky; top:0; backdrop-filter: blur(8px); z-index:10;
-         background: linear-gradient(180deg, rgba(11,13,18,.85), rgba(11,13,18,.55)); border-bottom:1px solid var(--edge) }
-nav { display:flex; align-items:center; justify-content:space-between; max-width:1100px; margin:0 auto; padding: .8rem var(--grid) }
-.nav-links { display:flex; gap: 1rem; align-items:center }
-.btn { display:inline-flex; align-items:center; gap:.6ch; padding:.6rem .9rem; border-radius:12px; border:1px solid var(--edge);
-       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); color:var(--text); text-decoration:none }
-.btn:hover { box-shadow: 0 0 0 2px rgba(157,76,255,.25), 0 10px 20px rgba(0,0,0,.35) }
-
-/* --- Hero ------------------------------------------------------------- */
-h1 { font-size: clamp(1.8rem, 1.4rem + 2.2vw, 3rem); line-height:1.15; margin:.2rem 0 .8rem }
-.lead { color: var(--muted); max-width: 65ch }
-.glow {
-  background: linear-gradient(90deg, var(--brand-1), var(--brand-2), var(--brand-3));
-  -webkit-background-clip: text; background-clip:text; color: transparent;
-  text-shadow: 0 0 20px rgba(157,76,255,.25), 0 0 24px rgba(0,230,255,.15);
-}
-.kpis { display:grid; grid-template-columns: repeat(3, 1fr); gap: var(--grid); margin-top: var(--grid) }
-@media (max-width:700px){ .kpis{ grid-template-columns: 1fr 1fr } }
-.kpi { text-align:center; border:1px solid var(--edge); border-radius:14px; padding:16px; background:rgba(255,255,255,.02) }
-.kpi .n { font-size:1.4rem; font-weight:700 }
-.kpi .l { color: var(--muted); font-size:.9rem }
-
-/* --- Sections --------------------------------------------------------- */
-section { margin-top: calc(var(--grid)*2) }
-h2 { font-size: clamp(1.3rem, 1rem + 1.4vw, 2rem); margin: 0 0 .6rem }
-.muted { color: var(--muted) }
-
-/* --- Projects grid ---------------------------------------------------- */
-.projects { display:grid; grid-template-columns: repeat(12, 1fr); gap: var(--grid) }
-.project { grid-column: span 6; display:grid; gap:.6rem }
-@media (max-width: 900px){ .project{ grid-column: span 12 } }
-.thumb { aspect-ratio: 16/9; border-radius: 14px; border:1px solid var(--edge); overflow: hidden; position: relative;
-         background: radial-gradient(120% 120% at 0% 0%, rgba(157,76,255,.22), transparent 70%),
-                     radial-gradient(120% 120% at 100% 0%, rgba(0,230,255,.18), transparent 70%),
-                     linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); }
-.thumb::after { content:""; position:absolute; inset:0; box-shadow: inset 0 0 40px rgba(0,0,0,.4) }
-.project h3 { margin:.2rem 0 }
-.project .actions { display:flex; gap:.6rem; flex-wrap:wrap }
-
-/* --- Skills ----------------------------------------------------------- */
-.skills { display:flex; flex-wrap: wrap; gap:.6rem }
-
-/* --- Timeline --------------------------------------------------------- */
-.timeline { display:grid; gap: var(--grid) }
-.when { color: var(--muted); font-size:.9rem }
-
-/* --- Footer ----------------------------------------------------------- */
-footer { border-top: 1px solid var(--edge); margin-top: calc(var(--grid)*2); padding: var(--grid) 0; color: var(--muted) }
-
-/* --- Toggle ----------------------------------------------------------- */
-.toggle { cursor:pointer; border:1px solid var(--edge); border-radius: 999px; padding:.4rem .7rem; font-size:.9rem; background:rgba(255,255,255,.04) }
-
+    h1 {
+      font-size:2.2rem; margin:0 0 1rem;
+      background:linear-gradient(90deg,#ff2fb9,#00e6ff);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    nav {
+      display:flex; gap:1.2rem; flex-wrap:wrap;
+      justify-content:center;
+    }
+    a {
+      color:#fff; text-decoration:none; padding:.6rem 1.2rem;
+      border:1px solid rgba(255,255,255,.2); border-radius:12px;
+      transition:all .3s ease;
+    }
+    a:hover {
+      background:rgba(255,255,255,.1);
+      transform:translateY(-3px);
+      box-shadow:0 6px 12px rgba(0,0,0,.4);
+    }
+    footer {
+      position:absolute; bottom:1rem; font-size:.8rem; color:#666;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div style="display:flex;align-items:center;gap:.8rem">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1">
-              <stop offset="0%" stop-color="#9d4cff"/>
-              <stop offset="50%" stop-color="#00e6ff"/>
-              <stop offset="100%" stop-color="#ff2fb9"/>
-            </linearGradient>
-          </defs>
-          <path d="M12 2l3.1 6.3L22 9.2l-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2z" stroke="url(#g)" fill="none" stroke-width="1.3"/>
-        </svg>
-        <strong>Deyno</strong>
-      </div>
-      <div class="nav-links">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="#skills">Skills</a>
-        <a class="btn" href="#about">About</a>
-        <a class="btn" href="#contact">Contact</a>
-        <button id="themeToggle" class="toggle" aria-label="Toggle theme">Toggle theme</button>
-      </div>
-    </nav>
-  </header>  <main class="wrap row">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="card">
-        <h1>Developer & Designer building <span class="glow">AI‑powered media systems</span> and <span class="glow">cosmic‑glow UIs</span>.</h1>
-        <p class="lead">I architect and ship high‑performance Rust pipelines (MediaX) and privacy‑first computer vision workflows. On the front‑end, I design neon‑glow interfaces that stay fast, accessible, and delightful.</p>
-        <div class="kpis">
-          <div class="kpi"><div class="n">10+ yrs</div><div class="l">Systems & UI</div></div>
-          <div class="kpi"><div class="n">GPU‑ready</div><div class="l">ONNX / TensorRT</div></div>
-          <div class="kpi"><div class="n">Rust • Python</div><div class="l">Full‑stack</div></div>
-        </div>
-        <div style="margin-top: var(--grid); display:flex; gap:.6rem; flex-wrap:wrap">
-          <a class="btn" href="#projects">See projects</a>
-          <a class="btn" href="mailto:deyno.dev@gmail.com">Email</a>
-          <a class="btn" href="https://github.com/Deyno-dev" rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="./resume.pdf" rel="noopener">Résumé (PDF)</a>
-        </div>
-      </div>
-      <div class="card" aria-hidden="true">
-        <div class="thumb" style="height:280px; display:grid; place-items:center;">
-          <div style="text-align:center">
-            <div style="font-size:3.2rem; font-weight:800; letter-spacing:.02em; line-height:1.1;">
-              <span style="background:linear-gradient(90deg,var(--brand-1),var(--brand-2),var(--brand-3));-webkit-background-clip:text;background-clip:text;color:transparent">MediaX</span>
-            </div>
-            <div class="muted" style="margin-top:.6rem">Local‑first AI • Dedup • OCR • NSFW • Gallery</div>
-          </div>
-        </div>
-      </div>
-    </section><!-- Projects -->
-<section id="projects">
-  <h2>Highlighted projects</h2>
-  <p class="muted">Production‑ready systems and UI work. More on GitHub.</p>
-  <div class="projects">
-    <article class="project">
-      <div class="thumb"></div>
-      <h3>MediaX — Core Pipeline</h3>
-      <p class="muted">Rust + Python, GPU‑accelerated media ingestion: dedup (phash/vidhash), OCR, NSFW, tagging, semantic search. Modular stages and offline‑first privacy.</p>
-      <div class="skills">
-        <span class="tag">Rust</span>
-        <span class="tag">ONNX</span>
-        <span class="tag">CUDA/TensorRT</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">Prometheus</span>
-      </div>
-      <div class="actions">
-        <a class="btn" href="https://deyno-dev.github.io/mediax/">Live Docs</a>
-        <a class="btn" href="https://github.com/Deyno-dev/mediax">Source</a>
-      </div>
-    </article>
-    <article class="project">
-      <div class="thumb"></div>
-      <h3>MediaX Gallery — Viewer/UI</h3>
-      <p class="muted">Vite + React + Tailwind, cosmic‑glow theme. Dashboard, duplicate groups, file comparer, job history, config editor, model manager, and more.</p>
-      <div class="skills">
-        <span class="tag">React</span>
-        <span class="tag">Tailwind</span>
-        <span class="tag">Charting</span>
-        <span class="tag">WebGL</span>
-      </div>
-      <div class="actions">
-        <a class="btn" href="https://deyno-dev.github.io/mediax.gallery/">Live Demo</a>
-        <a class="btn" href="https://github.com/Deyno-dev/mediax.gallery">Source</a>
-      </div>
-    </article>
-    <article class="project">
-      <div class="thumb"></div>
-      <h3>Zip Engine — High‑throughput archiver</h3>
-      <p class="muted">Parallel zstd/deflate, solid archives, content‑aware strategies, integrity checks, and AES‑256 encryption modes with CLI and library APIs.</p>
-      <div class="skills">
-        <span class="tag">Rust</span>
-        <span class="tag">zstd</span>
-        <span class="tag">Rayon</span>
-        <span class="tag">CLI</span>
-      </div>
-      <div class="actions">
-        <a class="btn" href="#">Readme</a>
-        <a class="btn" href="#">Source</a>
-      </div>
-    </article>
-    <article class="project">
-      <div class="thumb"></div>
-      <h3>OCR Powerhouse</h3>
-      <p class="muted">PaddleOCR + TensorRT, EasyOCR ONNX fallback, REST/gRPC interfaces, and GPU‑aware Docker builds with multi‑language support.</p>
-      <div class="skills">
-        <span class="tag">Python</span>
-        <span class="tag">ONNX/TensorRT</span>
-        <span class="tag">Docker</span>
-      </div>
-      <div class="actions">
-        <a class="btn" href="#">Docs</a>
-        <a class="btn" href="#">Source</a>
-      </div>
-    </article>
-  </div>
-</section>
+  <h1 id="title">Deyno</h1>
+  <nav>
+    <a href="./projects.html">Projects</a>
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./info.html">Info</a>
+    <a href="./funding.html">Funding</a>
+  </nav>
+  <footer>© <span id="y"></span> Deyno</footer>
 
-<!-- Skills -->
-<section id="skills">
-  <h2>Capabilities</h2>
-  <div class="card">
-    <div class="skills">
-      <span class="tag">Rust</span>
-      <span class="tag">Python</span>
-      <span class="tag">React</span>
-      <span class="tag">ONNX Runtime</span>
-      <span class="tag">TensorRT</span>
-      <span class="tag">CUDA</span>
-      <span class="tag">FastAPI</span>
-      <span class="tag">Axum</span>
-      <span class="tag">SQL/SQLite</span>
-      <span class="tag">Prometheus</span>
-      <span class="tag">Docker/K8s</span>
-      <span class="tag">CI/CD</span>
-      <span class="tag">UX/UI</span>
-      <span class="tag">Accessibility</span>
-      <span class="tag">Security</span>
-    </div>
-  </div>
-</section>
+  <script>
+    // Year
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-<!-- About -->
-<section id="about">
-  <h2>About</h2>
-  <div class="card">
-    <p>I’m Fredrik “Deyno” Nilsen — a systems‑minded developer/designer shipping privacy‑first AI media tooling. I build resilient pipelines that run locally, scale to multi‑GPU, and remain operable on modest hardware.</p>
-    <div class="timeline">
-      <div>
-        <div class="when">2025 — now</div>
-        <strong>MediaX</strong> — modular, GPU‑accelerated media pipeline with local‑first AI.
-      </div>
-      <div>
-        <div class="when">2023 — 2024</div>
-        <strong>Cosmic UI</strong> — neon gradient design system (React/Tailwind), dashboards & charts.
-      </div>
-      <div>
-        <div class="when">Earlier</div>
-        <strong>Systems & infra</strong> — backup engines, search/indexing, CLI tooling, observability.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card" style="display:flex; gap: var(--grid); flex-wrap:wrap; align-items:center;">
-    <a class="btn" href="mailto:deyno.dev@gmail.com">deyno.dev@gmail.com</a>
-    <a class="btn" href="https://github.com/Deyno-dev" rel="noopener">GitHub</a>
-    <a class="btn" href="https://x.com/" rel="noopener">X/Twitter</a>
-    <a class="btn" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
-  </div>
-</section>
-
-  </main>  <footer>
-    <div class="wrap" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
-      <div>© <span id="y"></span> Deyno • All rights reserved</div>
-      <div class="muted">Built with semantic HTML • no frameworks • GPU‑friendly gradients</div>
-    </div>
-  </footer>  <script>
-    // Year stamp
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Theme toggling (persisted)
-    const btn = document.getElementById('themeToggle');
-    const LS_KEY = 'theme';
-    const setTheme = (mode) => {
-      if (mode === 'light') document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
-      else document.documentElement.style.filter = '';
-      localStorage.setItem(LS_KEY, mode);
-      btn.textContent = mode === 'light' ? 'Dark mode' : 'Light mode';
-    };
-    const saved = localStorage.getItem(LS_KEY);
-    if (saved) setTheme(saved);
-    btn.addEventListener('click', () => {
-      const cur = localStorage.getItem(LS_KEY) || 'dark';
-      setTheme(cur === 'dark' ? 'light' : 'dark');
-    });
-
-    // Respect reduced motion (subtle parallax removal)
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.style.backgroundAttachment = 'initial';
-    }
-  </script></body>
-  </html>
+    // Simple animation: pulse glow on title
+    let t = document.getElementById("title");
+    setInterval(()=>{
+      t.style.textShadow = "0 0 20px rgba(0,230,255,.6),0 0 30px rgba(255,47,185,.4)";
+      setTimeout(()=> t.style.textShadow = "none", 600);
+    }, 2000);
+  </script>
+</body>
+</html>
