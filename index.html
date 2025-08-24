@@ -1,41 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Deyno - Github.io</title>
-  <meta name="color-scheme" content="dark">
-  <link rel="stylesheet" href="./assets/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deyno</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="nav">
-      <div class="nav-left">
-        <a class="nav-link" href="./">Home</a>
-        <a class="nav-link" href="./portfolio.html">Portfolio</a>
-        <a class="nav-link" href="./design.html">Design</a>
-        <a class="nav-link" href="./projects.html">Projects</a>
-        <a class="nav-link" href="./funding.html">Funding</a>
-        <button id="openSidebar" class="btn">Menu</button>
-      </div>
-      <div class="nav-right">
-        <a class="logo" href="./"><img src="./assets/logo.png" width="200" height="200" alt="Logo"/></a>
-      </div>
-    </div>
-  </header>
-  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
-  <aside id="sidebar" class="sidebar">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <strong>Links</strong>
-      <button id="closeSidebar" class="btn">Close</button>
-    </div>
-    <div class="hr"></div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Deyno</div>
     <nav>
-      <a class="nav-link" href="./info.html">Info</a><br/>
-      <a class="nav-link" href="https://github.com/Deyno-dev" target="_blank">GitHub</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#funding">Funding</a></li>
+      </ul>
     </nav>
-  </aside>
-  <footer class="footer">© <span id="y"></span> Deyno</footer>
-  <script src="./assets/app.js"></script>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Deyno</h1>
+    <p>Minimal. Modern. Cosmic.</p>
+  </section>
+
+  <!-- Sections -->
+  <section id="portfolio" class="content-section">
+    <h2>Portfolio</h2>
+  </section>
+
+  <section id="design" class="content-section">
+    <h2>Design</h2>
+  </section>
+
+  <section id="projects" class="content-section">
+    <h2>Projects</h2>
+  </section>
+
+  <section id="funding" class="content-section">
+    <h2>Funding</h2>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Deyno</p>
+  </footer>
 </body>
 </html>
