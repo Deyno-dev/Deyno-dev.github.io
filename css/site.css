@@ -41,7 +41,7 @@ body {
 .topbar { position: sticky; top: 0; z-index: 50; background: var(--surface); border-bottom: 1px solid var(--line); }
 .topbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); font-weight: 700; }
-.brand img { height: 24px; width: auto; }
+.brand img { height: 200px; width: auto; }
 .topnav { display: flex; gap: 16px; align-items: center; }
 .topnav a { color: #cfd5db; text-decoration: none; padding: 8px 10px; border-radius: 8px; }
 .topnav a:hover, .topnav a.active { background: #151a24; color: #fff; }
