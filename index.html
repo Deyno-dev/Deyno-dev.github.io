@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deyno</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deyno — Home</title>
+  <meta name="description" content="Deyno — Home - Deyno" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Deyno</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#design">Design</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#funding">Funding</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="page">
+    <!-- Sidebar (left, logo switched) -->
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" aria-label="Deyno home">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Deyno</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="design.html">Design</a>
+        <a href="projects.html">Projects</a>
+        <a href="funding.html">Funding</a>
+      </nav>
+    </aside>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Deyno</h1>
-    <p>Minimal. Modern. Cosmic.</p>
-  </section>
+    <!-- Minimal top header just for mobile menu -->
+    <header class="header">
+      <button class="menu-btn" data-menu aria-expanded="false" aria-controls="sidebar">Menu</button>
+    </header>
 
-  <!-- Sections -->
-  <section id="portfolio" class="content-section">
-    <h2>Portfolio</h2>
-  </section>
+    <!-- Main Content -->
+    <main role="main">
+      <h1>Home</h1>
+      <p class="muted">Structure is ready. Add content when you’re ready — no random filler.</p>
 
-  <section id="design" class="content-section">
-    <h2>Design</h2>
-  </section>
+      <div class="section">
+        <h2>Section</h2>
+        <p class="muted">Placeholder block for content.</p>
+      </div>
+    </main>
 
-  <section id="projects" class="content-section">
-    <h2>Projects</h2>
-  </section>
-
-  <section id="funding" class="content-section">
-    <h2>Funding</h2>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© Deyno</p>
-  </footer>
+    <!-- Footer (sticky bottom) -->
+    <footer class="footer">
+      <span>© Deyno</span>
+      <span><a href="https://github.com/Deyno-dev" rel="noopener">GitHub</a></span>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
