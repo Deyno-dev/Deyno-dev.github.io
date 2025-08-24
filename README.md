@@ -31,7 +31,6 @@ It serves as the landing page for my work as a developer & designer — focusing
 - **Infra:** Docker, Kubernetes, Prometheus  
 - **UI/UX:** Tailwind, dark-cosmic neon theme  
 
----
 
 
 
@@ -56,5 +55,4 @@ Pages are deployed automatically from the main branch.
 
 ---
 
-Do you want me to also prepare a **LICENSE file** (MIT/Apache dual like your other repos) so the portfolio repo is consistent with the rest of your GitHub?
 
