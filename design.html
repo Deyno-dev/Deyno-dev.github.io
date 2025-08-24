@@ -1,51 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Deyno — Design</title>
-  <meta name="description" content="Deyno — Design - Deyno" />
-  <link rel="stylesheet" href="css/main.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Design - Deyno</title>
+  <meta name="color-scheme" content="dark">
+  <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <div class="page">
-    <!-- Sidebar (left, logo switched) -->
-    <aside class="sidebar" id="sidebar">
-      <a class="brand" href="index.html" aria-label="Deyno home">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Deyno</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="design.html">Design</a>
-        <a href="projects.html">Projects</a>
-        <a href="funding.html">Funding</a>
-      </nav>
-    </aside>
-
-    <!-- Minimal top header just for mobile menu -->
-    <header class="header">
-      <button class="menu-btn" data-menu aria-expanded="false" aria-controls="sidebar">Menu</button>
-    </header>
-
-    <!-- Main Content -->
-    <main role="main">
-      <h1>Design</h1>
-      <p class="muted">Structure is ready. Add content when you’re ready — no random filler.</p>
-
-      <div class="section">
-        <h2>Section</h2>
-        <p class="muted">Placeholder block for content.</p>
+  <header class="header">
+    <div class="nav">
+      <div class="nav-left">
+        <a class="logo" href="./"><img src="./assets/logo.png" width="200" height="200" alt="Logo"/></a>
       </div>
-    </main>
-
-    <!-- Footer (sticky bottom) -->
-    <footer class="footer">
-      <span>© Deyno</span>
-      <span><a href="https://github.com/Deyno-dev" rel="noopener">GitHub</a></span>
-    </footer>
-  </div>
-  <script src="js/main.js"></script>
+      <div class="nav-right">
+        <a class="nav-link" href="./">Home</a>
+        <a class="nav-link" href="./portfolio.html">Portfolio</a>
+        <a class="nav-link" href="./design.html">Design</a>
+        <a class="nav-link" href="./projects.html">Projects</a>
+        <a class="nav-link" href="./funding.html">Funding</a>
+        <button id="openSidebar" class="btn">Menu</button>
+      </div>
+    </div>
+  </header>
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+  <aside id="sidebar" class="sidebar">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <strong>Links</strong>
+      <button id="closeSidebar" class="btn">Close</button>
+    </div>
+    <div class="hr"></div>
+    <nav>
+      <a class="nav-link" href="./info.html">Info</a><br/>
+      <a class="nav-link" href="https://github.com/Deyno-dev" target="_blank">GitHub</a>
+    </nav>
+  </aside>
+  <main>
+    <section id="design">
+      <h2>Design</h2>
+      <p>Design philosophy and examples.</p>
+      <p>Minimalistic approach with high design standards.</p>
+    </section>
+  </main>
+  <footer class="footer">© <span id="y"></span> Deyno</footer>
+  <script src="./assets/app.js"></script>
 </body>
 </html>
