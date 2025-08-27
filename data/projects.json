@@ -1,4 +1,4 @@
-[
+[  <!-- data/projects.json (application/json) -->
   {
     "title": "MediaX \u2014 Gallery Viewer",
     "summary": "Local-first, high-performance media viewer with tagging, search, and non-destructive edits.",
@@ -53,6 +53,51 @@
       {
         "label": "Docs",
         "href": "#"
+      }
+    ]
+  },
+  {
+    "title": "AI Model Trainer",
+    "summary": "Custom trainer for ONNX models with distributed computing.",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "Distributed"
+    ],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/Deyno-dev/ai-trainer"
+      }
+    ]
+  },
+  {
+    "title": "Semantic Search Engine",
+    "summary": "Local semantic search for media libraries using embeddings.",
+    "tags": [
+      "Rust",
+      "Embeddings",
+      "Search"
+    ],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/Deyno-dev/semantic-search"
+      }
+    ]
+  },
+  {
+    "title": "Privacy Shield",
+    "summary": "Zero-knowledge proof system for data privacy.",
+    "tags": [
+      "Rust",
+      "Crypto",
+      "Privacy"
+    ],
+    "links": [
+      {
+        "label": "Repo",
+        "href": "https://github.com/Deyno-dev/privacy-shield"
       }
     ]
   }

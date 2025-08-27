@@ -1,0 +1,32 @@
+[  <!-- data/blog.json (application/json) -->
+  {
+    "title": "Building High-Performance Media Pipelines in Rust",
+    "date": "2025-08-15",
+    "excerpt": "Exploring optimizations for IO-bound tasks in media processing.",
+    "link": "blog/media-pipelines.html"
+  },
+  {
+    "title": "AI Privacy: Local Models vs Cloud",
+    "date": "2025-07-20",
+    "excerpt": "Why local-first AI is the future for sensitive data.",
+    "link": "blog/ai-privacy.html"
+  },
+  {
+    "title": "Designing Intuitive UIs for Developers",
+    "date": "2025-06-10",
+    "excerpt": "Balancing functionality and aesthetics in dev tools.",
+    "link": "blog/ui-design.html"
+  },
+  {
+    "title": "The Future of Deduplication in AI",
+    "date": "2025-09-05",
+    "excerpt": "Advancements in perceptual hashing.",
+    "link": "blog/deduplication-future.html"
+  },
+  {
+    "title": "Optimizing Embeddings for Search",
+    "date": "2025-10-01",
+    "excerpt": "Techniques for efficient semantic search.",
+    "link": "blog/embeddings-optimization.html"
+  }
+]

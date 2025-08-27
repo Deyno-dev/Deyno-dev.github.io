@@ -1,0 +1,7 @@
+<!-- portfolio/assets/thumbs/semantic.svg (image/svg+xml) -->
+<!-- /portfolio/assets/thumbs/semantic.svg (NEW) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#0e141f"/>
+  <circle cx="320" cy="180" r="120" fill="none" stroke="#6f7b8d" stroke-width="4"/>
+  <path d="M320 60 L320 300 M200 180 L440 180" stroke="#6f7b8d" stroke-width="4"/>
+</svg>

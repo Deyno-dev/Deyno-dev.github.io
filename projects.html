@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="keywords" content="projects, rust, python, ai, deyno"/>
 <title>Deyno — Project</title>
 <meta name="description" content="My Selected Projects."/>
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"/>
@@ -17,14 +18,17 @@
   <div class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="index.html"><img src="assets/logo.png" alt="Deyno"/></a>
-    <nav class="topnav" aria-label="Top navigation">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="resume.html">Resume</a>
-      <a href="funding.html">Funding</a>
-      <a href="docs/index.html">Docs</a>
-    </nav>
+     <nav class="topnav" aria-label="Top navigation">
+       <a href="index.html">Home</a>
+       <a href="projects.html">Projects</a>
+       <a href="about.html">About</a>
+       <a href="resume.html">Resume</a>
+       <a href="funding.html">Funding</a>
+       <a href="datasets.html">Datasets</a>
+       <a href="ai_models.html">AI Models</a>
+       <a href="blog.html">Blog</a>
+       <a href="docs/index.html">Docs</a>
+     </nav>
   </div>
 </div>
   <main>
@@ -32,45 +36,8 @@
       <div class="container">
         <h1 class="section-title">Work</h1>
         <p class="lead">Selected projects and case studies. Focus: local-first media systems, AI tooling, and performance.</p>
-
-        <div class="work-grid" style="margin-top:12px;">
-          <article class="work-card">
-            <div class="work-thumb"></div>
-            <div class="work-body">
-              <div class="work-meta">
-                <strong>MediaX</strong>
-                <span class="tag">Rust</span>
-              </div>
-              <p class="muted">Rust-based media processing, </p>
-              <div class="tags"><span class="tag">Privacy By Design</span><span class="tag">AI</span><span class="tag">Zero-Knowledge</span><span class="tag">Modular</span></div>
-              <div><a class="btn" href="projects.html">Details</a></div>
-            </div>
-      
-          <article class="work-card">
-            <div class="work-thumb"></div>
-            <div class="work-body">
-              <div class="work-meta">
-                <strong>MediaX Gallery</strong>
-                <span class="tag">Rust</span>
-              </div>
-              <p class="muted">Rust-based media processing, </p>
-              <div class="tags"><span class="tag">Monolithic</span></div>
-              <div><a class="btn" href="projects.html">Details</a></div>
-            </div>
-              
-          <article class="work-card">
-            <div class="work-thumb"></div>
-            <div class="work-body">
-              <div class="work-meta">
-                <strong>Comming soon..</strong>
-                <span class="tag">Rust</span>
-              </div>
-              <p class="muted">Coming soon..</p>
-              <div class="tags"><span class="tag">Rust based</span></div>
-              <div><a class="btn" href="projects.html">Details</a></div>
-            </div>
-          </article>
-        </div>
+        <input id="project-search" type="text" placeholder="Search projects..." style="width:100%; padding:10px; margin-bottom:16px; background:var(--panel); border:1px solid var(--line); color:var(--text); border-radius:var(--radius);">
+        <div id="projects-container" class="projects-grid"></div>
       </div>
     </section>
   </main>

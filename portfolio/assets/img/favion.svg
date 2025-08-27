@@ -1,0 +1,6 @@
+<!-- /assets/img/favicon.svg  — NEW (simple, neutral SVG favicon) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0f0f10"></rect>
+  <path d="M14 46 L22 18 L30 18 L22 46 Z" fill="#6ec1ff"></path>
+  <path d="M34 46 L42 18 L50 18 L42 46 Z" fill="#9be37f"></path>
+</svg>

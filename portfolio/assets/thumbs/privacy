@@ -1,0 +1,7 @@
+<!-- portfolio/assets/thumbs/privacy.svg (image/svg+xml) -->
+<!-- /portfolio/assets/thumbs/privacy.svg (NEW) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#0e141f"/>
+  <path d="M200 100 L440 100 L440 260 L200 260 Z" fill="none" stroke="#6f7b8d" stroke-width="4"/>
+  <circle cx="320" cy="180" r="40" fill="none" stroke="#6f7b8d" stroke-width="4"/>
+</svg>

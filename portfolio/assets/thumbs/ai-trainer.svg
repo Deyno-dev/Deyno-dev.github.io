@@ -1,0 +1,7 @@
+<!-- portfolio/assets/thumbs/ai-trainer.svg (image/svg+xml) -->
+<!-- /portfolio/assets/thumbs/ai-trainer.svg (NEW) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#0e141f"/>
+  <rect x="40" y="60" width="560" height="240" rx="16" fill="#101826" stroke="#223047"/>
+  <path d="M120 180 L200 120 L280 180 L360 120 L440 180 L520 120" stroke="#6f7b8d" stroke-width="4" fill="none"/>
+</svg>

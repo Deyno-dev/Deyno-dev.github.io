@@ -1,0 +1,45 @@
+<!-- portfolio/metrics/index.html (text/html) -->
+<!-- /portfolio/metrics/index.html (NEW) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="keywords" content="metrics, rust, sqlite, portfolio"/>
+  <title>System Metrics Logger — Case Study</title>
+  <meta name="description" content="High-throughput metrics collector with SQLite + zstd archives."/>
+  <link rel="stylesheet" href="../css/portfolio.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <div class="brand">System Metrics Logger</div>
+      <div class="back">
+        <a href="../">← Back to Portfolio</a>
+        <a href="/" target="_blank" rel="noopener">Open Home in new tab</a>
+      </div>
+      <div class="section-title">Links</div>
+      <div class="filters">
+        <a href="https://github.com/Deyno-dev" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="spacer"></div>
+      <div class="copyright">© 2025 Deyno</div>
+    </aside>
+    <header class="header"><div class="breadcrumbs">Portfolio / System Metrics Logger</div></header>
+    <main>
+      <article class="hero">
+        <h1 style="margin:0 0 8px;">System Metrics Logger</h1>
+        <p class="muted">High-throughput metrics collector with SQLite + zstd archives.</p>
+      </article>
+      <section class="section"><h2>Context</h2><p class="muted">Long-term metrics without a complex TSDB or vendor lock-in.</p></section>
+      <section class="section"><h2>Problem</h2><p class="muted">High-write rates and storage bloat in lightweight environments.</p></section>
+      <section class="section"><h2>Solution</h2><p class="muted">Append-only segments, periodic compaction, zstd archives, and simple queries.</p></section>
+      <section class="section"><h2>Results</h2><p class="muted">Predictable footprint with good query performance on modest hardware.</p></section>
+      <section class="section"><h2>Tech</h2><p class="muted">Rust, SQLite, zstd, export to CSV/Parquet.</p></section>
+      <section class="section"><h2>Impact</h2><p class="muted">Handled 1M+ metrics/sec with low resource usage.</p></section>
+      <section class="section"><h2>Demo</h2><video controls><source src="demo.mp4" type="video/mp4"></video></section>
+    </main>
+    <footer class="footer"><span>© 2025 Deyno</span><a class="btn" href="../">Back to Portfolio</a></footer>
+  </div>
+</body>
+</html>

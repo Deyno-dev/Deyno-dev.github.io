@@ -1,0 +1,85 @@
+// <!-- portfolio/data/portfolio.json (application/json) -->
+// /portfolio/data/portfolio.json (UPDATED)
+[
+  {
+    "slug": "mediax",
+    "title": "MediaX — Gallery",
+    "oneLine": "Local-first viewer with tagging, search, and non-destructive edits.",
+    "tags": ["product", "backend", "rust", "ai"],
+    "detail": "mediax/index.html",
+    "link": "https://github.com/Deyno-dev",
+    "thumb": "assets/thumbs/mediax.webp"
+  },
+  {
+    "slug": "dedup",
+    "title": "MediaX — Dedup Engine",
+    "oneLine": "Content-aware deduplication: cryptographic + perceptual hashing.",
+    "tags": ["backend", "rust", "cli"],
+    "detail": "dedup/index.html",
+    "link": "https://github.com/Deyno-dev",
+    "thumb": "assets/thumbs/dedup.webp"
+  },
+  {
+    "slug": "ocr",
+    "title": "OCR Powerhouse",
+    "oneLine": "PaddleOCR + ONNX + TensorRT with gRPC/REST bindings.",
+    "tags": ["ai", "python", "cuda"],
+    "detail": "ocr/index.html",
+    "link": "https://github.com/Deyno-dev",
+    "thumb": "assets/thumbs/ocr.webp"
+  },
+  {
+    "slug": "ui-kit",
+    "title": "Gallery UI Components",
+    "oneLine": "Reusable cards, modals, dashboards for media management.",
+    "tags": ["design", "frontend"],
+    "detail": "ui-kit/index.html",
+    "link": "https://github.com/Deyno-dev",
+    "thumb": "assets/thumbs/ui-kit.webp"
+  },
+  {
+    "slug": "nsfw",
+    "title": "Lightweight NSFW Prefilter",
+    "oneLine": "Two-stage local classifier for rapid pre-triage of large image sets.",
+    "tags": ["ai", "onnx", "privacy"],
+    "detail": "nsfw/index.html",
+    "link": "https://github.com/Deyno-dev",
+    "thumb": "assets/thumbs/nsfw.webp"
+  },
+  {
+    "slug": "metrics",
+    "title": "System Metrics Logger",
+    "oneLine": "High-throughput metrics collector with SQLite + zstd archives.",
+    "tags": ["backend", "rust", "observability"],
+    "detail": "metrics/index.html",
+    "link": "https://github.com/Deyno-dev",
+    "thumb": "assets/thumbs/metrics.webp"
+  },
+  {
+    "slug": "ai-trainer",
+    "title": "AI Model Trainer",
+    "oneLine": "Distributed trainer for custom ONNX models.",
+    "tags": ["ai", "python", "pytorch"],
+    "detail": "ai-trainer/index.html",
+    "link": "https://github.com/Deyno-dev/ai-trainer",
+    "thumb": "assets/thumbs/ai-trainer.webp"
+  },
+  {
+    "slug": "semantic-search",
+    "title": "Semantic Search Engine",
+    "oneLine": "Local semantic search for media libraries.",
+    "tags": ["rust", "ai", "search"],
+    "detail": "semantic-search/index.html",
+    "link": "https://github.com/Deyno-dev/semantic-search",
+    "thumb": "assets/thumbs/semantic.webp"
+  },
+  {
+    "slug": "privacy-shield",
+    "title": "Privacy Shield",
+    "oneLine": "Zero-knowledge proof system.",
+    "tags": ["rust", "crypto"],
+    "detail": "privacy-shield/index.html",
+    "link": "https://github.com/Deyno-dev/privacy-shield",
+    "thumb": "assets/thumbs/privacy.webp"
+  }
+]

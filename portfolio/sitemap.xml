@@ -1,0 +1,17 @@
+<!-- portfolio/sitemap.xml (application/xml) -->
+<!-- sitemap.xml (ROOT — EXAMPLE UPDATE) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Keep your existing entries... -->
+  <url><loc>https://deyno-dev.github.io/</loc></url>
+  <!-- Portfolio subsite -->
+  <url><loc>https://deyno-dev.github.io/portfolio/</loc></url>
+  <url><loc>https://deyno-dev.github.io/portfolio/mediax/</loc></url>
+  <url><loc>https://deyno-dev.github.io/portfolio/dedup/</loc></url>
+  <url><loc>https://deyno-dev.github.io/portfolio/ocr/</loc></url>
+  <url><loc>https://deyno-dev.github.io/portfolio/ui-kit/</loc></url>
+  <url><loc>https://deyno-dev.github.io/portfolio/nsfw/</loc></url>
+  <url><loc>https://deyno-dev.github.io/portfolio/metrics/</loc></url>
+  <url><loc>https://deyno-dev.github.io/portfolio/ai-trainer/</loc></url>
+  <url><loc>https://deyno-dev.github.io/portfolio/semantic-search/</loc></url>
+</urlset>

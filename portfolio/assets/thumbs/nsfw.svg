@@ -1,0 +1,13 @@
+<!-- portfolio/assets/thumbs/nsfw.svg (image/svg+xml) -->
+<!-- /portfolio/assets/thumbs/nsfw.svg (NEW) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#0e141f"/>
+  <rect x="24" y="24" width="592" height="312" rx="16" fill="#101826" stroke="#223047"/>
+  <g fill="#6f7b8d">
+    <rect x="60" y="80" width="200" height="16" rx="4"/>
+    <rect x="60" y="110" width="300" height="10" rx="4"/>
+    <rect x="60" y="128" width="260" height="10" rx="4"/>
+  </g>
+  <circle cx="520" cy="110" r="22" fill="none" stroke="#6f7b8d" stroke-width="4"/>
+  <path d="M508 110h24" stroke="#6f7b8d" stroke-width="4"/>
+</svg>

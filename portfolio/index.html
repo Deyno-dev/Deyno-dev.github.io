@@ -1,0 +1,51 @@
+<!-- portfolio/index.html (text/html) -->
+<!-- /portfolio/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="keywords" content="portfolio, developer, rust, ai, design"/>
+  <title>Deyno — Portfolio</title>
+  <meta name="description" content="Selected work and case studies."/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <script defer src="js/portfolio.js"></script>
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <div class="brand">Portfolio</div>
+      <div class="back">
+        <a href="/">← Back to Home</a>
+        <a href="/" target="_blank" rel="noopener">Open Home in new tab</a>
+      </div>
+      <div class="section-title">Filter</div>
+      <div class="filters" role="tablist" aria-label="Portfolio filters">
+        <button class="filter-btn active" data-tag="all">All</button>
+        <button class="filter-btn" data-tag="product">Product</button>
+        <button class="filter-btn" data-tag="backend">Backend</button>
+        <button class="filter-btn" data-tag="ai">AI</button>
+        <button class="filter-btn" data-tag="design">Design</button>
+        <button class="filter-btn" data-tag="rust">Rust</button>
+        <button class="filter-btn" data-tag="python">Python</button>
+      </div>
+      <div class="spacer"></div>
+      <div class="copyright">© 2025 Deyno</div>
+    </aside>
+    <header class="header">
+      <div class="breadcrumbs">Home / Portfolio</div>
+    </header>
+    <main>
+      <h1 class="title">Selected Work</h1>
+      <p class="muted">Case studies and notable builds. Filters are client-side; detail pages live under each slug.</p>
+      <input id="project-search" type="text" placeholder="Search projects..." style="width:100%; padding:10px; margin-bottom:16px; background:var(--panel); border:1px solid var(--line); color:var(--text); border-radius:var(--radius);">
+      <section class="grid cols-3" id="portfolio-holder" style="margin-top:12px;"></section>
+    </main>
+    <footer class="footer">
+      <span>© 2025 Deyno</span>
+      <a class="btn" href="https://github.com/Deyno-dev" target="_blank" rel="noopener">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
