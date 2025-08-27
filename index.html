@@ -2,39 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Deyno — Home</title>
-<meta name="description" content="Developer/Designer hybrid: systems, AI, and clean UX."/>
-<link rel="icon" href="assets/logo.png" type="image/png"/>
-<link rel="stylesheet" href="css/site.css"/>
-<script defer src="js/site.js"></script>
-<meta property="og:title" content="Deyno — Home"/>
-<meta property="og:description" content="Developer/Designer hybrid: systems, AI, and clean UX."/>
-<meta property="og:type" content="website"/>
-<meta name="twitter:card" content="summary_large_image"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Deyno — Home</title>
+  <meta name="description" content="Developer/Designer hybrid: systems, AI, and clean UX."/>
+  <link rel="icon" href="assets/logo.png" type="image/png"/>
+  <link rel="stylesheet" href="css/site.css"/>
+  <script defer src="js/site.js"></script>
+  <meta property="og:title" content="Deyno — Home"/>
+  <meta property="og:description" content="Developer/Designer hybrid: systems, AI, and clean UX."/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <style>
+    /* Advanced animations */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    .animate-fade { animation: fadeIn 1s ease-out forwards; }
+    .animate-pulse:hover { animation: pulse 1s infinite; }
+    .parallax { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+    canvas#particles { position: fixed; top: 0; left: 0; z-index: -1; pointer-events: none; }
+  </style>
 </head>
 <body>
-  <div class="topbar">
-  <div class="container topbar-inner">
-    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Deyno"/></a>
-    <nav class="topnav" aria-label="Top navigation">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="design.html">Design</a>
-      <a href="about.html">About</a>
-      <a href="funding.html">Funding</a>
-      <a href="portfolio/index.html">Portfolio</a>
-      <a href="datasets.html">Datasets</a>
-      <a href="ai_models.html">AI Models</a>
-    </nav>
+  <canvas id="particles"></canvas>
+  <div class="topbar animate-fade" style="animation-delay: 0.2s;">
+    <div class="container topbar-inner">
+      <a class="brand animate-pulse" href="index.html"><img src="assets/logo.png" alt="Deyno"/></a>
+      <nav class="topnav" aria-label="Top navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="design.html">Design</a>
+        <a href="about.html">About</a>
+        <a href="funding.html">Funding</a>
+        <a href="portfolio/index.html">Portfolio</a>
+        <a href="datasets.html">Datasets</a>
+        <a href="ai_models.html">AI Models</a>
+      </nav>
+    </div>
   </div>
-  <nav id="main-nav" class="topnav" aria-label="Top navigation"></nav>
-    
-  <footer class="footer">
-  <div class="container inner">
-    <span>© 2025 Deyno</span>
-    <span><a class="btn" href="https://github.com/Deyno-dev" target="_blank" rel="noopener">GitHub</a></span>
-  </div>
-</footer>
+  <main class="section parallax" style="background-image: url('assets/bg.jpg');"> <!-- Add bg.jpg -->
+    <div class="container animate-fade" style="animation-delay: 0.5s;">
+      <h1 class="section-title animate-pulse">Deyno</h1>
+      <p class="lead">Systems, AI, UX.</p>
+    </div>
+  </main>
+  <footer class="footer animate-fade" style="animation-delay: 0.8s;">
+    <div class="container inner">
+      <span>© 2025 Deyno</span>
+      <a class="btn animate-pulse" href="https://github.com/Deyno-dev" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+  <script>
+    // Particle animation
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const particles = [];
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2 + 1,
+        vx: Math.random() * 2 - 1,
+        vy: Math.random() * 2 - 1
+      });
+    }
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx = -p.vx;
+        if (p.y < 0 || p.y > canvas.height) p.vy = -p.vy;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(78, 166, 255, 0.5)';
+        ctx.fill();
+      });
+    }
+    animate();
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
 </html>
