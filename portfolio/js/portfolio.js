@@ -64,6 +64,17 @@
       });
     });
   }
+  // Update js/site.js for testimonials
+// Add to end:
+  const testimonialsContainer = document.querySelector('.testimonials');
+  if (testimonialsContainer) {
+    testimonialsContainer.innerHTML = `
+      <div class="testimonial">
+        <p>"Great work on MediaX!" - Client A</p>
+      </div>
+    `;
+  }
+}
   // Infinite scroll placeholder
   // Implement if needed
 })();

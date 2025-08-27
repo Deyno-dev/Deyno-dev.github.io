@@ -1,0 +1,57 @@
+<!-- blog.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Deyno — Blog</title>
+  <meta name="description" content="Technical blog posts"/>
+  <link rel="icon" href="assets/logo.png" type="image/png"/>
+  <link rel="stylesheet" href="css/site.css"/>
+  <script defer src="js/site.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="Deyno"/></a>
+      <nav class="topnav" aria-label="Top navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="funding.html">Funding</a>
+        <a href="datasets.html">Datasets</a>
+        <a href="ai_models.html">AI Models</a>
+        <a href="blog.html">Blog</a>
+        <a href="docs/index.html">Docs</a>
+      </nav>
+    </div>
+  </div>
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Blog</h1>
+      <p class="lead">Thoughts on Rust, AI, and media systems.</p>
+      <div class="blog-grid" id="blog-container"></div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container inner">
+      <span>© 2025 Deyno</span>
+      <a class="btn" href="https://github.com/Deyno-dev" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+  <script>
+    fetch('data/blog.json')
+      .then(res => res.json())
+      .then(posts => {
+        document.getElementById('blog-container').innerHTML = posts.map(post => `
+          <div class="blog-card">
+            <h3>${post.title}</h3>
+            <p class="muted">${post.date} — ${post.excerpt}</p>
+            <a href="${post.link}">Read More</a>
+          </div>
+        `).join('');
+      });
+  </script>
+</body>
+</html>
